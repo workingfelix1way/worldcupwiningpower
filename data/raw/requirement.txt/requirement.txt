@@ -1,0 +1,29 @@
+text
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+jupyter>=1.0.0
+
+Minimal Version
+pandas
+numpy
+matplotlib
+seaborn
+jupyter
+
+If you've already installed the packages in your environment, run:
+
+bash
+pip freeze > requirements.txt
+
+However, `pip freeze` often includes many unnecessary packages. For a GitHub portfolio project, the manually curated version below is usually better:
+pandas
+numpy
+matplotlib
+seaborn
+jupyter
+
+Users can then install all dependencies with:
+bash
+pip install -r requirements.txt
