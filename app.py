@@ -6,7 +6,7 @@ from src.ai_model import WorldCupPredictor
 
 st.set_page_config(page_title="World Cup 2026 AI Predictor", page_icon="⚽", layout="wide")
 st.title("⚽ Hệ Thống Trí Tuệ Nhân Tạo Dự Đoán Toàn Diện World Cup 2026")
-st.markdown("### Đồ án Portfolio Kỹ Sư Dữ Liệu - Thuật toán lõi: XGBoost Classifier")
+st.markdown("### Contributed by: **Nguyễn Thế Anh(C), Phạm Thảo Nguyên, Phạm Quang Thái**")
 st.write("---")
 
 @st.cache_resource
