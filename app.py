@@ -13,7 +13,9 @@ st.set_page_config(
 )
 
 st.title("⚽ Hệ Thống Trí Tuệ Nhân Tạo Dự Đoán Toàn Diện World Cup 2026")
-st.markdown("### Đồ án môn học: Nhập môn Trí tuệ nhân tạo (Mức độ: Cao cấp - Mục tiêu: A+)")
+st.markdown("### Môn học: Nhập môn Trí tuệ nhân tạo")
+st.markdown("### GVHD: Trần Đình Tân")
+st.markdown("### Nhóm thực hiện: Nguyễn Thế Anh, Lê Quang Thái, Phạm Thảo Nguyên")
 st.write("---")
 
 @st.cache_data
