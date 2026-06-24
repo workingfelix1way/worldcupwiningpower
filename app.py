@@ -5,9 +5,7 @@ import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
-# ==========================================
-# CẤU HÌNH GIAO DIỆN WEB (STREAMLIT)
-# ==========================================
+
 st.set_page_config(
     page_title="Hệ thống AI - Dự đoán World Cup 2026", 
     page_icon="⚽", 
@@ -18,9 +16,6 @@ st.title("⚽ Hệ Thống Trí Tuệ Nhân Tạo Dự Đoán Toàn Diện World
 st.markdown("### Đồ án môn học: Nhập môn Trí tuệ nhân tạo (Mức độ: Cao cấp - Mục tiêu: A+)")
 st.write("---")
 
-# ==========================================
-# 1. TẢI VÀ TIỀN XỬ LÝ DỮ LIỆU ĐỘNG
-# ==========================================
 @st.cache_data
 def load_and_preprocess_data():
     raw_dir = 'data/raw'
@@ -83,9 +78,6 @@ def train_ml_model(df):
 
 ml_model = train_ml_model(df_ml)
 
-# ==========================================
-# 3. LOGIC DỰ ĐOÁN XÁC SUẤT TRẬN ĐẤU
-# ==========================================
 def predict_match_probabilities(home, away, is_knockout=False):
     h_att = df_team_strength.loc[home, 'goals_scored'] if home in df_team_strength.index else 1.0
     h_def = df_team_strength.loc[home, 'goals_conceded'] if home in df_team_strength.index else 1.0
@@ -102,9 +94,6 @@ def predict_match_probabilities(home, away, is_knockout=False):
         
     return p_home, p_draw, p_away
 
-# ==========================================
-# 4. GIAO DIỆN CHÍNH (ĐÃ LƯỢC BỎ TAB)
-# ==========================================
 st.header("🔮 Trình Giả Lập Dự Đoán Kết Quả Trận Đấu")
 all_teams = sorted(df_team_strength.index.tolist())
 
@@ -130,7 +119,7 @@ if st.button("🔥 KÍCH HOẠT DỰ ĐOÁN KẾT QUẢ", use_container_width=Tr
         st.text(f"• Tỷ lệ {team_away} Thắng: {p_a*100:.1f}%")
         
         st.write("---")
-        # Dòng kết luận bằng hộp thông báo màu sắc gọn gàng
+        
         if p_h > p_a and p_h > p_d:
             st.success(f"🏆 **KẾT LUẬN:** Mô hình dự đoán **{team_home}** chiếm ưu thế và có khả năng chiến thắng cao nhất!")
         elif p_a > p_h and p_a > p_d:
