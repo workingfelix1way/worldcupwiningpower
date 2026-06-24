@@ -4,9 +4,18 @@ os.environ['KAGGLE_USERNAME'] = 'felix1way'
 os.environ['KAGGLE_KEY'] = 'KGAT_79f03df6879de65354d42ebff5ddb38d'
 
 import zipfile
-from kaggle.api.kaggle_api_extended import KaggleApi
+try:
+    from kaggle.api.kaggle_api_extended import KaggleApi # type: ignore
+    _HAVE_KAGGLE = True
+except Exception:
+    KaggleApi = None
+    _HAVE_KAGGLE = False
 
 def download_data_via_kaggle_token():
+    if not _HAVE_KAGGLE:
+        print("❌ The 'kaggle' package is not available. Install it with: pip install kaggle")
+        return
+
     api = KaggleApi()
     try:
         print("🔑 Đang gửi chuỗi định danh Token tới hệ thống Kaggle...")
