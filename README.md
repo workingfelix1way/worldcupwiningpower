@@ -1,32 +1,33 @@
-# ⚽ FIFA World Cup 2026 Match Predictor using Machine Learning
+# FIFA World Cup 2026 Match Predictor using Machine Learning
 
-An enterprise-grade Machine Learning Classification Pipeline built with Python and Streamlit to predict the probabilities (Win, Draw, Lose) of any match setup in the upcoming FIFA World Cup 2026. The system eliminates heavy charting components to focus purely on high-performance text-based metrics and domain-specific financial odds modeling.
+Đường ống Phân loại Machine Learning cấp doanh nghiệp được xây dựng bằng Python và Streamlit để dự đoán xác suất (Thắng, Hòa, Thua) của bất kỳ thiết lập trận đấu nào trong FIFA World Cup 2026 sắp tới. Hệ thống loại bỏ các thành phần vẽ biểu đồ nặng để tập trung hoàn toàn vào các số liệu dựa trên văn bản hiệu suất cao và mô hình tỷ lệ tài chính cụ thể về miền.
 
-## 🚀 Key Features
+## Các tính năng chính
 
-- **XGBoost Classifier Integration:** Replaced basic models with Extreme Gradient Boosting (`XGBClassifier`) for high-accuracy tabular data training.
-- **Dynamic Data Injection:** Automatically handles expanding World Cup 2026 rosters (e.g., Indonesia, Thailand, China, etc.) by calculating global baseline normalization scores to prevent `KeyError` on runtime.
-- **Strict UX Constraint:** Intelligent selectboxes that dynamically filter out the selected Home Team from the Away Team choices to eliminate redundant inputs.
-- **Sports Analytics Extension (Decimal Odds):** Converts mathematical prediction arrays into European Decimal Odds ($\text{Odds} = \frac{1}{\text{Probability}}$) providing a real-world sports betting reference.
-- **FIFA Tournament Logic:** Custom normalization logic to handle Group Stage matches (allowing draws) vs. Knock-Out stages (eliminating draws mathematically).
+- **Tích hợp XGBoost Classifier:** Thay thế các mô hình cơ bản bằng Extreme Gradient Boosting (`XGBClassifier`) để đào tạo dữ liệu bảng có độ chính xác cao.
+- **Tiêm dữ liệu động:** Tự động xử lý các danh sách đội World Cup 2026 mở rộng (ví dụ: Indonesia, Thái Lan, Trung Quốc, v.v.) bằng cách tính toán điểm bình thường hóa cơ bản toàn cầu để ngăn chặn `KeyError` khi chạy.
+- **Ràng buộc UX nghiêm ngặt:** Các hộp chọn thông minh lọc động đội chủ nhà được chọn khỏi các lựa chọn đội khách để loại bỏ các đầu vào dư thừa.
+- **Phần mở rộng Phân tích thể thao (Tỷ lệ thập phân):** Chuyển đổi các mảng dự đoán toán học thành Tỷ lệ thập phân Châu Âu ($\text{Odds} = \frac{1}{\text{Probability}}$) cung cấp tham chiếu cược thể thao thực tế.
+- **Lôgic giải đấu FIFA:** Lôgic bình thường hóa tùy chỉnh để xử lý các trận đấu vòng loại (cho phép hòa) so với các giai đoạn loại trực tiếp (loại bỏ hòa về mặt toán học).
 
 ---
 
-## 🛠️ System Architecture & Folder Structure
+## Kiến trúc hệ thống và Cấu trúc thư mục
 
-The project strictly follows the Modular OOP (Object-Oriented Programming) architecture to decouple data manipulation from interface presentation:
+Dự án tuân theo chặt chẽ kiến trúc OOP mô-đun (Lập trình hướng đối tượng) để tách biệt thao tác dữ liệu khỏi trình bày giao diện:
 
 ```text
 IntroduceAI/
-├── .gitignore            # Excludes massive files like venv/ and __pycache__/
-├── requirements.txt      # Reproducible dependency management
-├── app.py                # Ultra-lean Streamlit Frontend (Text-based presentation)
-├── README.md             # Project documentation
+├── .gitignore            # Loại trừ các tệp lớn như venv/ và __pycache__/
+├── requirements.txt      # Quản lý phụ thuộc có thể tái tạo
+├── app.py                # Giao diện Streamlit cực kỳ gọn nhẹ (Trình bày dựa trên văn bản)
+├── README.md             # Tài liệu dự án
 │
 ├── data/
-│   └── raw/              # Ground-truth Kaggle CSV historical datasets
+│   └── raw/              # Bộ dữ liệu lịch sử Kaggle đúng thực tế
 │
-└── src/                  # Core Machine Learning Backend
-    ├── __init__.py       # Initializes src as a Python package
-    ├── data_pipeline.py  # ETL, Feature Engineering (Attack/Defense Strength calculation)
-    └── ai_model.py       # Model training, Hyperparameter configuration & Evaluation
+└── src/                  # Backend Machine Learning cốt lõi
+    ├── __init__.py       # Khởi tạo src như một gói Python
+    ├── data_pipeline.py  # ETL, Feature Engineering (Tính toán Attack/Defense Strength)
+    └── ai_model.py       # Đào tạo mô hình, Cấu hình siêu tham số & Đánh giá
+```

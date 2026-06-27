@@ -1,24 +1,24 @@
-# World-cup-prediction-2026
+# Dự đoán World Cup 2026
 
-## 📌 Project Overview
+## Tổng quan dự án
 
-This project demonstrates a complete Data Analysis workflow using Python. The objective is to clean, transform, analyze, and visualize data to uncover meaningful insights and support data-driven decision-making.
+Dự án này minh họa một quy trình Phân tích Dữ liệu hoàn chỉnh bằng Python. Mục tiêu là làm sạch, chuyển đổi, phân tích và trực quan hóa dữ liệu để khám phá những hiểu biết có ý nghĩa và hỗ trợ ra quyết định dựa trên dữ liệu.
 
-The project includes data preprocessing, exploratory data analysis (EDA), visualization, feature engineering, and documentation following industry-standard practices.
+Dự án bao gồm tiền xử lý dữ liệu, phân tích dữ liệu khám phá (EDA), trực quan hóa, kỹ thuật tính năng và tài liệu tuân theo các thực tiễn tiêu chuẩn công nghiệp.
 
-## 🎯 Objectives
+## Mục tiêu
 
-* Load and explore the dataset
-* Handle missing values and inconsistencies
-* Detect and analyze outliers
-* Transform and encode data
-* Perform Exploratory Data Analysis (EDA)
-* Generate meaningful visualizations
-* Extract actionable insights
-* Document the entire analysis process
-* Maintain project version control using Git and GitHub
+* Tải và khám phá tập dữ liệu
+* Xử lý các giá trị bị thiếu và không nhất quán
+* Phát hiện và phân tích các ngoại lệ
+* Chuyển đổi và mã hóa dữ liệu
+* Thực hiện Phân tích Dữ liệu Khám phá (EDA)
+* Tạo ra các hình ảnh hóa có ý nghĩa
+* Trích xuất những hiểu biết có thể hành động được
+* Tài liệu toàn bộ quá trình phân tích
+* Duy trì kiểm soát phiên bản dự án bằng Git và GitHub
 
-## 🛠 Technologies Used
+## Công nghệ sử dụng
 
 * Python
 * Pandas
@@ -29,9 +29,9 @@ The project includes data preprocessing, exploratory data analysis (EDA), visual
 * Git
 * GitHub
 
-## 📂 Project Structure
+## Cấu trúc dự án
 
-│
+```
 ├── data/
 │   ├── test (2).csv
 │   └── cleaned_dataset.csv
@@ -50,67 +50,68 @@ The project includes data preprocessing, exploratory data analysis (EDA), visual
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
 
-## 📊 Data Analysis Process
+## Quy trình Phân tích Dữ liệu
 
-### 1. Data Collection and Loading
+### 1. Thu thập và Tải dữ liệu
 
-* Imported dataset using Pandas.
-* Verified dataset structure and dimensions.
+* Nhập tập dữ liệu bằng Pandas.
+* Xác minh cấu trúc và kích thước tập dữ liệu.
 
-### 2. Data Exploration
+### 2. Khám phá Dữ liệu
 
-* Examined data types and column information.
-* Generated summary statistics.
-* Identified missing values and potential data quality issues.
+* Kiểm tra các loại dữ liệu và thông tin cột.
+* Tạo thống kê tóm tắt.
+* Xác định các giá trị bị thiếu và các vấn đề chất lượng dữ liệu tiềm ẩn.
 
-### 3. Data Cleaning
+### 3. Làm sạch Dữ liệu
 
-* Handled missing numerical values using median imputation.
-* Handled missing categorical values using mode imputation.
-* Checked for duplicate records.
+* Xử lý các giá trị số bị thiếu bằng phép tính trung vị.
+* Xử lý các giá trị phân loại bị thiếu bằng phép tính chế độ.
+* Kiểm tra các bản ghi trùng lặp.
 
-### 4. Outlier Detection
+### 4. Phát hiện Ngoại lệ
 
-* Used the Interquartile Range (IQR) method.
-* Visualized outliers using boxplots.
+* Sử dụng phương pháp Phạm vi tứ phân vị (IQR).
+* Trực quan hóa các ngoại lệ bằng boxplots.
 
-### 5. Data Transformation
+### 5. Chuyển đổi Dữ liệu
 
-* Applied One-Hot Encoding for categorical variables.
-* Created new features to improve analysis.
-* Prepared data for further analytical tasks.
+* Áp dụng One-Hot Encoding cho các biến phân loại.
+* Tạo các tính năng mới để cải thiện phân tích.
+* Chuẩn bị dữ liệu cho các tác vụ phân tích tiếp theo.
 
-### 6. Exploratory Data Analysis (EDA)
+### 6. Phân tích Dữ liệu Khám phá (EDA)
 
-* Distribution analysis using histograms.
-* Relationship analysis using scatter plots.
-* Correlation analysis using heatmaps.
-* Statistical summary generation.
+* Phân tích phân bố bằng biểu đồ.
+* Phân tích mối quan hệ bằng biểu đồ phân tán.
+* Phân tích tương quan bằng bản đồ nhiệt.
+* Tạo tóm tắt thống kê.
 
-### 7. Visualization
+### 7. Trực quan hóa
 
-* FIFA Points Distribution
-* Market Value vs FIFA Points
-* Correlation Heatmap
+* Phân bố Điểm FIFA
+* Giá trị Thị trường so với Điểm FIFA
+* Bản đồ nhiệt Tương quan
 
-## 📈 Key Findings
+## Những phát hiện chính
 
-* Teams with higher market values generally achieve higher FIFA rankings.
-* Goal difference is an important indicator of team performance.
-* Player ratings and recent form scores strongly influence FIFA points.
-* Several variables show strong positive correlations.
+* Các đội có giá trị thị trường cao hơn thường đạt được xếp hạng FIFA cao hơn.
+* Hiệu số bàn thắng là chỉ số quan trọng của hiệu suất đội.
+* Xếp hạng cầu thủ và điểm hình thức gần đây ảnh hưởng mạnh mẽ đến điểm FIFA.
+* Một số biến thể hiện mối tương quan tích cực mạnh mẽ.
   
-## 🚀 How to Run the Project
+## Cách chạy dự án
 
-### Run Analysis
+### Chạy Phân tích
 
 python analysis.py
 
-or open the Jupyter Notebook:
+hoặc mở Jupyter Notebook:
 jupyter notebook
 
-## 📋 Requirements
+## Yêu cầu
 
 pandas
 numpy
@@ -118,16 +119,16 @@ matplotlib
 seaborn
 jupyter
 
-## 📷 Sample Visualizations
+## Hình ảnh Mẫu
 
-* Distribution of FIFA Points
-* Market Value vs FIFA Points Scatter Plot
-* Correlation Heatmap
+* Phân bố Điểm FIFA
+* Biểu đồ Phân tán Giá trị Thị trường so với Điểm FIFA
+* Bản đồ nhiệt Tương quan
 
-## 👨‍💻 Author
+## Tác giả
 
 Bibas Basnet
 
-## 📄 License
+## Giấy phép
 
-This project is intended for educational and portfolio purposes.
+Dự án này dành cho mục đích giáo dục và danh mục đầu tư.

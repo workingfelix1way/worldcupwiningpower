@@ -24,7 +24,7 @@ except Exception as e:
     st.info("💡 Mẹo: Hãy chắc chắn bạn đã chạy file download_data.py để có thư mục data/raw/")
     st.stop()
 
-st.header("🔮 Trình Giả Lập Dự Đoán Kết Quả Trận Đấu")
+st.header(" Trình Giả Lập Dự Đoán Kết Quả Trận Đấu ")
 all_teams = sorted(df_team_strength.index.tolist())
 
 col1, col2 = st.columns(2)
