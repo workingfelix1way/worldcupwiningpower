@@ -1,29 +1,17 @@
-# **Major Insights from Analysis**
+# Những hiểu biết chính từ Phân tích
 
+1. **Giá trị Thị trường và Hiệu suất**
+   * Các đội có giá trị thị trường cao hơn có xu hướng có điểm FIFA cao hơn.
+   * Đầu tư tài chính có liên quan tích cực đến hiệu suất.
 
+2. **Hiệu số Bàn thắng Quan trọng**
+   * Các đội có hiệu số bàn thắng cao hơn thường xếp hạng tốt hơn.
+   * Hiệu suất tấn công mạnh mẽ góp phần đáng kể.
 
-1. ##### Market Value and Performance 
-* Team with higher market values tend to have higher FIFA points.
-* Financial investment is positively related to performance.
+3. **Các Tính năng Tương quan Mạnh**
+   * Xếp hạng cầu thủ và điểm hình thức gần đây ảnh hưởng mạnh mẽ đến xếp hạng FIFA.
+   * Một số biến thể hiện đa cộng tuyến.
 
-
-
-##### 2\. Goal Difference Matters
-
-* Teams with higher goal difference generally rank better.
-* Strong offensive performance contributes significantly.
-
-
-
-##### 3\. Strong Correlation Features
-
-* Player ratings and recent form scores strongly influence FIFA rankings.
-* Some variables show multicollinearity.
-
-
-
-##### 4\. Outliers Exist
-
-* A few elite teams have exceptionally high market values.
-* Outlier handling is important for accurate modeling.
-
+4. **Các Ngoại lệ Tồn tại**
+   * Một vài đội hàng đầu có giá trị thị trường đặc biệt cao.
+   * Xử lý ngoại lệ là quan trọng để mô hình hóa chính xác.
